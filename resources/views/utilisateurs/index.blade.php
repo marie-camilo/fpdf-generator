@@ -31,6 +31,9 @@
                     <tbody class="bg-white divide-y divide-gray-200">
                     @foreach($utilisateurs as $u)
                         <tr class="hover:bg-gray-50 transition-colors">
+{{--                            <td class="px-6 py-4">--}}
+{{--                                <input type="checkbox" name="selected_users[]" value="{{ $u->id }}" class="rounded text-indigo-600">--}}
+{{--                            </td>--}}
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0 h-10 w-10 bg-indigo-100 text-indigo-700 rounded-full flex items-center justify-center font-bold">
