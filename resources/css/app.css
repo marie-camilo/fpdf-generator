@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    a {
+        @apply transition duration-150 ease-in-out;
+    }
+
+    ::selection {
+        @apply bg-cardify-teal/30 text-cardify-dark;
+    }
+}
+
+@layer components {
+    .btn-cardify {
+        @apply inline-flex items-center justify-center px-6 py-3 bg-cardify-teal text-white rounded-xl font-bold text-xs uppercase tracking-widest shadow-md shadow-cardify-teal/20 transition-all duration-200 hover:bg-cardify-light hover:-translate-y-0.5 active:scale-95;
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-gray-100 text-gray-500 rounded-xl font-bold text-xs uppercase tracking-widest transition-all duration-200 hover:bg-gray-50 hover:text-cardify-dark;
+    }
+
+    .section-title {
+        @apply text-xl font-bold text-cardify-dark leading-tight border-l-4 border-cardify-teal pl-4;
+    }
+
+    .preview-card {
+        @apply bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden;
+    }
+}

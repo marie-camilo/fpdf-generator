@@ -11,6 +11,12 @@ export default {
 
     theme: {
         extend: {
+            colors: {
+                'cardify-dark': '#213c5d',
+                'cardify-gold': '#ad863f',
+                'cardify-teal': '#2c8290',
+                'cardify-light': '#32808f',
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
