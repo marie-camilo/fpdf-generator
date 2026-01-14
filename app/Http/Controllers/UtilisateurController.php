@@ -9,7 +9,8 @@ class UtilisateurController extends Controller
 {
     public function index()
     {
-        $utilisateurs = Utilisateur::all();
+        $utilisateurs = auth()->user()->utilisateurs;
+
         return view('utilisateurs.index', compact('utilisateurs'));
     }
 
@@ -22,17 +23,23 @@ class UtilisateurController extends Controller
     {
         $validated = $request->validate([
             'initiale' => 'required|max:2',
-            'prenomNom' => 'required|string|max:255',
-            'fonction' => 'required|string',
+            'prenomNom' => 'required',
+            'fonction' => 'required',
             'mail' => 'required|email',
             'telephone' => 'required',
         ]);
-        Utilisateur::create($validated);
-        return redirect()->route('utilisateurs.index')->with('success', 'Utilisateur créé !');
+
+        auth()->user()->utilisateurs()->create($validated);
+
+        return redirect()->route('utilisateurs.index')->with('success', 'Employé ajouté à votre compte !');
     }
 
     public function show(Utilisateur $utilisateur)
     {
+        if ($utilisateur->user_id !== auth()->id()) {
+            abort(403, 'Action non autorisée.');
+        }
+
         return view('utilisateurs.show', compact('utilisateur'));
     }
 

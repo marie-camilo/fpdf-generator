@@ -19,7 +19,7 @@
         <div class="flex items-center gap-4">
             @if (Route::has('login'))
                 @auth
-                    <a href="{{ url('/dashboard') }}" class="btn-cardify">Mon Dashboard</a>
+                    <a href="{{ url('/dashboard') }}" class="btn-cardify">Mon Compte</a>
                 @else
                     <a href="{{ route('login') }}" class="text-sm font-semibold hover:text-cardify-teal transition">Connexion</a>
                     @if (Route::has('register'))
@@ -46,7 +46,7 @@
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <a href="{{ route('register') }}" class="btn-cardify px-8 py-4">
+                <a href="{{ route('register') }}" class="btn-cardify">
                     Commencer maintenant
                 </a>
             </div>
@@ -60,7 +60,7 @@
 
                 <div class="relative h-full flex flex-col justify-between">
                     <div>
-                        <div class="w-14 h-14 bg-cardify-teal rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg mb-6">R</div>
+                        <div class="w-14 h-14 bg-cardify-teal rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg mb-6">DR</div>
                         <h2 class="text-3xl font-bold tracking-tight uppercase">Damien Renault</h2>
                         <p class="text-cardify-teal font-semibold">Programmeur Analyste</p>
                     </div>

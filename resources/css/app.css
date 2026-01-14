@@ -14,11 +14,11 @@
 
 @layer components {
     .btn-cardify {
-        @apply inline-flex items-center justify-center px-6 py-3 bg-cardify-teal text-white rounded-xl font-bold text-xs uppercase tracking-widest shadow-md shadow-cardify-teal/20 transition-all duration-200 hover:bg-cardify-light hover:-translate-y-0.5 active:scale-95;
+        @apply inline-flex items-center justify-center px-6 py-3 bg-cardify-teal text-white rounded-xl font-bold text-xs uppercase tracking-widest transition-colors duration-200 hover:bg-cardify-dark;
     }
 
     .btn-ghost {
-        @apply inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-gray-100 text-gray-500 rounded-xl font-bold text-xs uppercase tracking-widest transition-all duration-200 hover:bg-gray-50 hover:text-cardify-dark;
+        @apply inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-gray-100 text-gray-500 rounded-xl font-bold text-xs uppercase tracking-widest transition-colors duration-200 hover:bg-gray-50 hover:text-cardify-dark;
     }
 
     .section-title {

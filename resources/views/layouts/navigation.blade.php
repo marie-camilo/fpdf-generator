@@ -18,12 +18,6 @@
                     <x-nav-link :href="route('utilisateurs.index')" :active="request()->routeIs('utilisateurs.index')">
                         {{ __('Utilisateurs') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('model')" :active="request()->routeIs('model')">
-                        {{ __('Carte Model') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('demo')" :active="request()->routeIs('demo')">
-                        {{ __('Cartes Démo') }}
-                    </x-nav-link>
                     <x-nav-link :href="route('series')" target="_blank">
                         {{ __('Série PDF') }}
                     </x-nav-link>
@@ -47,7 +41,7 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('Profil') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -57,7 +51,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                {{ __('Déconnexion') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
